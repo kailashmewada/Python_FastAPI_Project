@@ -1,8 +1,11 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.routes.urls import router as auth_router
+from app.core.config import MONGO_URI, SECRET_KEY
 
 
+print("MONGO_URI:", MONGO_URI)
+print("SECRET_KEY:", SECRET_KEY)
 app = FastAPI()
 # CORS configuration
 
